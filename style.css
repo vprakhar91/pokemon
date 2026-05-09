@@ -1,0 +1,154 @@
+:root {
+    --cream: #F0E6D2;
+    --pika-yellow: #FFCB05;
+    --char-orange: #FF8D0E;
+    --squirt-blue: #83D1DF;
+    --bulb-green: #67C1AC;
+    --eevee-brown: #C19060;
+    --gen-purple: #9169AD;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.pokemon-card {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    border-bottom: 2px solid #fff;
+}
+.bg-left {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    z-index: 1;
+}
+
+.bg-right {
+    position: absolute;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background: var(--cream);
+    z-index: 1;
+}
+.pikachu .bg-left {
+    background-color: var(--pika-yellow);
+}
+
+.charmander .bg-left {
+    background-color: var(--char-orange);
+}
+
+.squirtle .bg-left {
+    background-color: var(--squirt-blue);
+}
+
+.bulbasaur .bg-left {
+    background-color: var(--bulb-green);
+}
+
+.eevee .bg-left {
+    background-color: var(--eevee-brown);
+}
+
+.gengar .bg-left {
+    background-color: var(--gen-purple);
+}
+
+.content {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    width: 100%;
+    padding: 0 10%;
+    align-items: center;
+}
+
+.text-side {
+    flex: 1;
+    color: #111;
+}
+
+.text-side h1 {
+    font-size: 6rem;
+    margin: 0;
+    font-weight: 900;
+}
+
+.text-side p {
+    max-width: 350px;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin: 20px 0;
+}
+
+.gen {
+    letter-spacing: 4px;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.image-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.main-img {
+    width: 110%;
+    filter: drop-shadow(30px 30px 40px rgba(0, 0, 0, 0.15));
+    transition: transform 0.5s ease;
+}
+
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 50px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 200;
+}
+
+.logo-container {
+    width: 150px;
+    margin-left: 5px;
+}
+
+.top-logo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .top-nav {
+        padding: 30px 20px;
+    }
+
+    .logo-container {
+        width: 110px;
+        margin-left: 5px;
+    }
+}
+
+/* Hover effect like a card */
+.pokemon-card:hover .main-img {
+    transform: scale(1.05);
+}
+
+.page-count {
+    font-weight: 900;
+    margin-top: 30px;
+    border-top: 2px solid #000;
+    display: inline-block;
+    padding-top: 10px;
+}
